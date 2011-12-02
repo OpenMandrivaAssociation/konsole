@@ -7,6 +7,7 @@ Group: Graphical desktop/KDE
 License: GPLv2 LGPLv2 GFDL
 URL: http://konsole.kde.org/
 BuildRequires: kdelibs4-devel >= 2:%{version}
+BuildRequires: kdebase4-devel >= 1:%{version}
 Requires: kdebase4-runtime
 Requires: x11-font-misc-misc
 
