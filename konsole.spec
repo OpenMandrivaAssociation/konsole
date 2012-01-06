@@ -1,6 +1,6 @@
 Name: konsole
 Summary: A terminal emulator similar to xterm for KDE
-Version: 4.7.95
+Version: 4.7.97
 Release: 1
 Epoch: 1
 Group: Graphical desktop/KDE
