@@ -18,7 +18,6 @@ A terminal emulator, similar to xterm, for KDE.
 
 %files
 %doc README COPYING COPYING.DOC COPYING.LIB
-%dir %_kde_docdir/%{name}/
 %_kde_bindir/konsole
 %_kde_bindir/konsoleprofile
 %_kde_libdir/kde4/libkonsolepart.so
