@@ -25,6 +25,7 @@ A terminal emulator, similar to xterm, for KDE.
 %_kde_libdir/libkonsoleprivate.so
 %_kde_datadir/applications/kde4/konsole.desktop
 %_kde_appsdir/konsole
+%_kde_appsdir/kconf_update/konsole*
 %_kde_datadir/kde4/services/konsolepart.desktop
 %_kde_datadir/kde4/servicetypes/terminalemulator.desktop
 %_kde_datadir/kde4/services/ServiceMenus/konsolehere.desktop
