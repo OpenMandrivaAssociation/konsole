@@ -1,6 +1,6 @@
 Name: konsole
 Summary: A terminal emulator similar to xterm for KDE
-Version: 4.8.4
+Version: 4.8.97
 Release: 1
 Epoch: 1
 Group: Graphical desktop/KDE
@@ -11,7 +11,7 @@ BuildRequires: kdebase4-devel >= 1:%{version}
 Requires: kdebase4-runtime
 Requires: x11-font-misc-misc
 
-Source: ftp://ftp.kde.org/pub/kde/stable/%version/src/%{name}-%version.tar.xz
+Source: ftp://ftp.kde.org/pub/kde/unstable/%version/src/%{name}-%version.tar.xz
 
 %description
 A terminal emulator, similar to xterm, for KDE.
