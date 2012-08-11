@@ -29,7 +29,6 @@ A terminal emulator, similar to xterm, for KDE.
 %{_kde_services}/ServiceMenus/konsolehere.desktop
 %{_kde_servicetypes}/terminalemulator.desktop
 %{_kde_docdir}/HTML/en/%{name}
-%{_kde_docdir}/%{name}
 
 #-----------------------------------------------------------------------------
 
