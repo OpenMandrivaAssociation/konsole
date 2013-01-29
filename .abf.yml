@@ -1,3 +1,4 @@
----
-sources:
+removed_sources:
   konsole-4.9.4.tar.xz: 64862dd9d6544f21d62b89b8b829c3ffaa2dafb7
+sources:
+  konsole-4.9.98.tar.xz: 9f02005d23db65839408be8a226fb5b86f7539b7
