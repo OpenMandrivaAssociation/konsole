@@ -1,6 +1,6 @@
 Summary:	A terminal emulator similar to xterm for KDE
 Name:		konsole
-Version:	4.12.4
+Version:	4.13.2
 Release:	1
 Epoch:		1
 Group:		Graphical desktop/KDE
@@ -34,6 +34,7 @@ A terminal emulator, similar to xterm, for KDE.
 %{_kde_applicationsdir}/konsole.desktop
 %{_kde_services}/konsolepart.desktop
 %{_kde_services}/ServiceMenus/konsolehere.desktop
+%{_kde_services}/ServiceMenus/konsolerun.desktop
 %{_kde_servicetypes}/terminalemulator.desktop
 %{_kde_docdir}/HTML/en/%{name}
 
@@ -50,6 +51,10 @@ A terminal emulator, similar to xterm, for KDE.
 %makeinstall_std -C build
 
 %changelog
+* Wed Jun 11 2014 Andrey Bondrov <andrey.bondrov@rosalab.ru> 1:4.13.2-1
+- New version 4.13.2
+- Update files (new service menu konsolerun)
+
 * Wed Apr 02 2014 Andrey Bondrov <andrey.bondrov@rosalab.ru> 1:4.12.4-1
 - New version 4.12.4
 
