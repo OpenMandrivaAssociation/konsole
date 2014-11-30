@@ -1,0 +1,13 @@
+diff --git a/src/ColorScheme.cpp b/src/ColorScheme.cpp
+index 0bf8cfe..8749776 100644
+--- a/src/ColorScheme.cpp
++++ b/src/ColorScheme.cpp
+@@ -406,7 +406,7 @@ bool ColorSchemeWallpaper::draw(QPainter& painter, const QRect& rect, qreal opac
+     if (!_picture || _picture->isNull())
+         return false;
+ 
+-    if (qFuzzyCompare(1.0, opacity)) {
++    if (qFuzzyCompare(qreal(1.0), opacity)) {
+         painter.drawTiledPixmap(rect, *_picture, rect.topLeft());
+         return true;
+     }

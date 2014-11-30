@@ -14,6 +14,9 @@ Url:		http://konsole.kde.org/
 %endif
 Source0:	ftp://ftp.kde.org/pub/kde/%{ftpdir}/%{version}/src/%{name}-%{version}.tar.xz
 Source1:	%{name}.rpmlintrc
+# if you don't know how to check ARM build
+# don't remove this patch
+Patch0:		konsole-4.14.3-qFuzzyCompare-arm.patch
 BuildRequires:	kdelibs4-devel
 BuildRequires:	kdebase4-devel
 Requires:	kdebase4-runtime
@@ -42,6 +45,7 @@ A terminal emulator, similar to xterm, for KDE.
 
 %prep
 %setup -q
+%apply_patches
 
 %build
 %cmake_kde4
