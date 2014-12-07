@@ -1,7 +1,7 @@
 Summary:	A terminal emulator similar to xterm for KDE
 Name:		konsole
 Version:	4.14.3
-Release:	1
+Release:	2
 Epoch:		1
 Group:		Graphical desktop/KDE
 License:	GPLv2 LGPLv2 GFDL
