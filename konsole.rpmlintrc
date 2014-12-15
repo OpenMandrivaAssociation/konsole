@@ -1,2 +1,7 @@
-# We're not actually a library package
+# libkonsoleprivate is technically a library that should have
+# its own package.
+# Realistically, konsole requires it and nothing outside of
+# konsole can use it (no headers shipped). No point in packaging
+# it separately, it just adds complexity.
 addFilter("E: non-versioned-file-in-library-package")
+addFilter("E: incoherent-version-in-name")
