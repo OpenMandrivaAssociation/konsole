@@ -38,6 +38,9 @@ BuildRequires:	cmake(KF5TextWidgets)
 BuildRequires:	cmake(KF5WidgetsAddons)
 BuildRequires:	cmake(KF5WindowSystem)
 BuildRequires:	cmake(KF5XmlGui)
+BuildRequires:	cmake
+BuildRequires:	ninja
+BuildRequires:	extra-cmake-modules5
 
 %description
 A terminal emulator, similar to xterm, for KDE.
