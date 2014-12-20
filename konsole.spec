@@ -1,7 +1,7 @@
 %define stable %([ "`echo %{version} |cut -d. -f3`" -ge 80 ] && echo -n un; echo -n stable)
 Summary:	A terminal emulator similar to xterm for KDE
 Name:		konsole
-Version:	14.11.97
+Version:	14.12.0
 Release:	1
 Epoch:		1
 Group:		Graphical desktop/KDE
@@ -55,7 +55,6 @@ A terminal emulator, similar to xterm, for KDE.
 %{_libdir}/qt5/plugins/konsolepart.so
 %{_datadir}/konsole
 %{_datadir}/applications/org.kde.konsole.desktop
-%{_datadir}/kconf_update/*
 %{_datadir}/knotifications5/konsole.notifyrc
 %{_datadir}/kservices5/konsolepart.desktop
 %{_datadir}/kservices5/ServiceMenus/konsolehere.desktop
