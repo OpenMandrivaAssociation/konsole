@@ -40,7 +40,7 @@ BuildRequires:	cmake(KF5WindowSystem)
 BuildRequires:	cmake(KF5XmlGui)
 BuildRequires:	cmake
 BuildRequires:	ninja
-BuildRequires:	extra-cmake-modules5
+BuildRequires:	cmake(ECM)
 
 %description
 A terminal emulator, similar to xterm, for KDE.
@@ -54,6 +54,7 @@ A terminal emulator, similar to xterm, for KDE.
 %{_libdir}/libkonsoleprivate.so.*
 %{_libdir}/qt5/plugins/konsolepart.so
 %{_datadir}/konsole
+%{_datadir}/appdata/org.kde.konsole.appdata.xml
 %{_datadir}/applications/org.kde.konsole.desktop
 %{_datadir}/knotifications5/konsole.notifyrc
 %{_datadir}/kservices5/konsolepart.desktop
@@ -68,8 +69,7 @@ A terminal emulator, similar to xterm, for KDE.
 %prep
 %setup -q
 %apply_patches
-%cmake -G Ninja \
-	-DKDE_INSTALL_USE_QT_SYS_PATHS:BOOL=ON
+%cmake_kde5
 
 %build
 ninja -C build
