@@ -1,2 +1,4 @@
-sources:
+removed_sources:
   konsole-15.08.0.tar.xz: 04df0367b89cca62dd6754de5d1dc6b32d626b6d
+sources:
+  konsole-15.08.1.tar.xz: ce9f7b9fdc3613a26f657270481c093e84934672
