@@ -52,14 +52,13 @@ A terminal emulator, similar to xterm, for KDE.
 %{_libdir}/libkonsoleprivate.so.*
 %{_libdir}/qt5/plugins/konsolepart.so
 %{_datadir}/konsole
-%{_datadir}/appdata/org.kde.konsole.appdata.xml
+%{_datadir}/metainfo/org.kde.konsole.appdata.xml
 %{_datadir}/applications/org.kde.konsole.desktop
 %{_datadir}/knotifications5/konsole.notifyrc
 %{_datadir}/kservices5/konsolepart.desktop
 %{_datadir}/kservices5/ServiceMenus/konsolehere.desktop
 %{_datadir}/kservices5/ServiceMenus/konsolerun.desktop
 %{_datadir}/kservicetypes5/terminalemulator.desktop
-%{_datadir}/kxmlgui5/konsole
 %doc %{_docdir}/HTML/en/konsole
 
 #-----------------------------------------------------------------------------
