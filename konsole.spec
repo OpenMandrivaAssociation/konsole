@@ -1,7 +1,7 @@
 %define stable %([ "`echo %{version} |cut -d. -f3`" -ge 80 ] && echo -n un; echo -n stable)
 Summary:	A terminal emulator similar to xterm for KDE
 Name:		konsole
-Version:	17.04.3
+Version:	17.07.90
 Release:	1
 Epoch:		1
 Group:		Graphical desktop/KDE
@@ -150,15 +150,6 @@ A terminal emulator, similar to xterm, for KDE.
 %{_datadir}/kservices5/ServiceMenus/konsolehere.desktop
 %{_datadir}/kservices5/ServiceMenus/konsolerun.desktop
 %{_datadir}/kservicetypes5/terminalemulator.desktop
-%doc %{_docdir}/HTML/en/konsole
-%lang(ca) %doc %{_docdir}/HTML/ca/konsole
-%lang(de) %doc %{_docdir}/HTML/de/konsole
-%lang(it) %doc %{_docdir}/HTML/it/konsole
-%lang(nl) %doc %{_docdir}/HTML/nl/konsole
-%lang(pt_BR) %doc %{_docdir}/HTML/pt_BR/konsole
-%lang(sr) %doc %{_docdir}/HTML/sr/konsole
-%lang(sv) %doc %{_docdir}/HTML/sv/konsole
-%lang(uk) %doc %{_docdir}/HTML/uk/konsole
 
 #-----------------------------------------------------------------------------
 
@@ -172,4 +163,4 @@ A terminal emulator, similar to xterm, for KDE.
 
 %install
 %ninja_install -C build
-%find_lang %{name}
+%find_lang %{name} --all-name --with-html
