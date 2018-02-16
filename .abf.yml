@@ -1,2 +1,4 @@
-sources:
+removed_sources:
   konsole-17.12.1.tar.xz: a24a63a6c2ca23eba039c932086082bbc11539d2
+sources:
+  konsole-17.12.2.tar.xz: e6f1b8472e2a2f632dfd18d6c9366c4fe7ca47ec
