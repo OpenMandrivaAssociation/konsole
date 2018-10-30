@@ -2,7 +2,7 @@
 Summary:	A terminal emulator similar to xterm for KDE
 Name:		konsole
 Version:	18.08.2
-Release:	1
+Release:	2
 Epoch:		1
 Group:		Graphical desktop/KDE
 License:	GPLv2 LGPLv2 GFDL
