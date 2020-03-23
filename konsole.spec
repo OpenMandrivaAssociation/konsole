@@ -1,7 +1,7 @@
 %define stable %([ "`echo %{version} |cut -d. -f3`" -ge 80 ] && echo -n un; echo -n stable)
 Summary:	A terminal emulator similar to xterm for KDE
 Name:		konsole
-Version:	19.12.3
+Version:	20.03.80
 Release:	1
 Epoch:		1
 Group:		Graphical desktop/KDE
@@ -9,6 +9,7 @@ License:	GPLv2 LGPLv2 GFDL
 Url:		http://konsole.kde.org/
 Source0:	http://download.kde.org/%{stable}/release-service/%{version}/src/%{name}-%{version}.tar.xz
 Source1:	%{name}.rpmlintrc
+Patch0:		konsole-20.03.80-qt-5.15.patch
 BuildRequires:	pkgconfig(Qt5Core)
 BuildRequires:	pkgconfig(Qt5DBus)
 BuildRequires:	pkgconfig(Qt5Widgets)

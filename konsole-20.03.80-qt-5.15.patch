@@ -1,0 +1,11 @@
+diff -up konsole-20.03.80/src/LineBlockCharacters.cpp.omv~ konsole-20.03.80/src/LineBlockCharacters.cpp
+--- konsole-20.03.80/src/LineBlockCharacters.cpp.omv~	2020-03-23 12:39:02.745492117 +0100
++++ konsole-20.03.80/src/LineBlockCharacters.cpp	2020-03-23 12:39:07.944456486 +0100
+@@ -27,6 +27,7 @@
+ 
+ // Qt
+ #include <QPainter>
++#include <QPainterPath>
+ 
+ namespace Konsole {
+ namespace LineBlockCharacters {
