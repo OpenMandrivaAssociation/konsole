@@ -1,7 +1,7 @@
 %define stable %([ "`echo %{version} |cut -d. -f3`" -ge 80 ] && echo -n un; echo -n stable)
 Summary:	A terminal emulator similar to xterm for KDE
 Name:		konsole
-Version:	21.04.2
+Version:	21.07.90
 Release:	1
 Epoch:		1
 Group:		Graphical desktop/KDE
@@ -138,10 +138,10 @@ A terminal emulator, similar to xterm, for KDE.
 %{_datadir}/qlogging-categories5/konsole.categories
 %{_datadir}/knsrcfiles/konsole.knsrc
 %{_bindir}/*
-%{_libdir}/libkdeinit5_konsole.so
 # Technically this should be a separate libpackage, but given it is
 # required by konsole and nothing else can use it, splitting it out
 # really doesn't make sense. Let's keep it here.
+%{_libdir}/libkonsoleapp.so.*
 %{_libdir}/libkonsoleprivate.so.*
 %{_libdir}/qt5/plugins/konsolepart.so
 %{_datadir}/khotkeys/konsole.khotkeys
