@@ -1,7 +1,7 @@
 %define stable %([ "`echo %{version} |cut -d. -f3`" -ge 80 ] && echo -n un; echo -n stable)
 Summary:	A terminal emulator similar to xterm for KDE
 Name:		konsole
-Version:	22.08.1
+Version:	22.08.2
 Release:	1
 Epoch:		1
 Group:		Graphical desktop/KDE
