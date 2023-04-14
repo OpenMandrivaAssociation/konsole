@@ -1,8 +1,8 @@
 %define stable %([ "`echo %{version} |cut -d. -f3`" -ge 80 ] && echo -n un; echo -n stable)
 Summary:	A terminal emulator similar to xterm for KDE
 Name:		konsole
-Version:	22.12.3
-Release:	2
+Version:	23.03.90
+Release:	1
 Epoch:		1
 Group:		Graphical desktop/KDE
 License:	GPLv2 LGPLv2 GFDL
@@ -137,6 +137,10 @@ Obsoletes:	kde-l10n-ca-valencia < 3:17.0.0-1
 A terminal emulator, similar to xterm, for KDE.
 
 %files -f %{name}.lang
+%{_libdir}/kconf_update_bin/konsole_show_menubar
+%{_datadir}/kconf_update/konsole.upd
+%{_datadir}/kconf_update/konsole_add_hamburgermenu_to_toolbar.sh
+%{_datadir}/zsh/site-functions/_konsole
 %{_datadir}/qlogging-categories5/konsole.categories
 %{_datadir}/knsrcfiles/konsole.knsrc
 %{_bindir}/*
@@ -156,7 +160,6 @@ A terminal emulator, similar to xterm, for KDE.
 %{_datadir}/kservicetypes5/terminalemulator.desktop
 %{_libdir}/kconf_update_bin/konsole_globalaccel
 %{_libdir}/qt5/plugins/konsoleplugins/konsole_quickcommandsplugin.so
-%{_datadir}/kconf_update/konsole_globalaccel.upd
 %{_datadir}/kio/servicemenus/konsolerun.desktop
 
 #-----------------------------------------------------------------------------
@@ -171,3 +174,6 @@ A terminal emulator, similar to xterm, for KDE.
 %install
 %ninja_install -C build
 %find_lang %{name} --all-name --with-html
+
+# We get this from distro-release
+rm %{buildroot}%{_sysconfdir}/xdg/konsolerc
