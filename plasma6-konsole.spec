@@ -2,7 +2,7 @@
 %define git 20230523
 
 Summary:	A terminal emulator similar to xterm for KDE
-Name:		konsole
+Name:		plasma6-konsole
 Version:	23.05.90
 Release:	%{?git:0.%{git}.}1
 Group:		Graphical desktop/KDE
@@ -21,6 +21,7 @@ BuildRequires:	cmake(Qt6DBus)
 BuildRequires:	cmake(Qt6Widgets)
 BuildRequires:	cmake(Qt6Multimedia)
 BuildRequires:	cmake(Qt6Test)
+BuildRequires:	cmake(Qt6Core5Compat)
 BuildRequires:	cmake(KF6Bookmarks)
 BuildRequires:	cmake(KF6Completion)
 BuildRequires:	cmake(KF6Config)
