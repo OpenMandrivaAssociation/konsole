@@ -1,5 +1,5 @@
 %define stable %([ "`echo %{version} |cut -d. -f3`" -ge 80 ] && echo -n un; echo -n stable)
-%define git 20230523
+%define git 20230610
 
 Summary:	A terminal emulator similar to xterm for KDE
 Name:		plasma6-konsole
@@ -9,7 +9,7 @@ Group:		Graphical desktop/KDE
 License:	GPLv2 LGPLv2 GFDL
 Url:		http://konsole.kde.org/
 %if 0%{?git:1}
-Source0:	https://invent.kde.org/utilities/konsole/-/archive/work/kf6/konsole-work-kf6.tar.bz2#/konsole-%{git}.tar.bz2
+Source0:	https://invent.kde.org/utilities/konsole/-/archive/master/konsole-master.tar.bz2#/konsole-%{git}.tar.bz2
 %else
 Source0:	http://download.kde.org/%{stable}/release-service/%{version}/src/%{name}-%{version}.tar.xz
 %endif
@@ -70,7 +70,6 @@ A terminal emulator, similar to xterm, for KDE.
 %{_datadir}/metainfo/org.kde.konsole.appdata.xml
 %{_datadir}/applications/org.kde.konsole.desktop
 %{_datadir}/knotifications6/konsole.notifyrc
-%{_datadir}/kservicetypes6/terminalemulator.desktop
 %{_libdir}/kconf_update_bin/konsole_globalaccel
 %{_qtdir}/plugins/konsoleplugins/konsole_quickcommandsplugin.so
 %{_datadir}/kio/servicemenus/konsolerun.desktop
@@ -79,7 +78,7 @@ A terminal emulator, similar to xterm, for KDE.
 #-----------------------------------------------------------------------------
 
 %prep
-%autosetup -p1 -n konsole-%{?git:work-kf6}%{!?git:%{version}}
+%autosetup -p1 -n konsole-%{?git:master}%{!?git:%{version}}
 %cmake \
 	-DBUILD_QCH:BOOL=ON \
 	-DBUILD_WITH_QT6:BOOL=ON \
