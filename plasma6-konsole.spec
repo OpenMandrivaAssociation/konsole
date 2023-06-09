@@ -46,6 +46,7 @@ BuildRequires:	cmake(KF6WindowSystem)
 BuildRequires:	cmake(KF6XmlGui)
 BuildRequires:	cmake(KF6GlobalAccel)
 BuildRequires:	cmake(ECM)
+BuildRequires:	%mklibname -d KF6IconWidgets
 # Just to make sure we don't pull in the conflicting Plasma5 package
 BuildRequires:	plasma6-xdg-desktop-portal-kde
 
