@@ -46,6 +46,8 @@ BuildRequires:	cmake(KF6WindowSystem)
 BuildRequires:	cmake(KF6XmlGui)
 BuildRequires:	cmake(KF6GlobalAccel)
 BuildRequires:	cmake(ECM)
+# Just to make sure we don't pull in the conflicting Plasma5 package
+BuildRequires:	plasma6-xdg-desktop-portal-kde
 
 %description
 A terminal emulator, similar to xterm, for KDE.
