@@ -1,4 +1,4 @@
-%define stable %([ "$(echo %{version} |cut -d. -f2)" -ge 80 -o "$(echo %{version} |cut -d. -f3)" -ge 80 ] && echo -n un; echo -n stable)
+%define stable %([ "$(echo %{version} |cut -d. -f2)" -ge 70 -o "$(echo %{version} |cut -d. -f3)" -ge 70 ] && echo -n un; echo -n stable)
 #define git 20231023
 
 Summary:	A terminal emulator similar to xterm for KDE
@@ -11,7 +11,7 @@ Url:		http://konsole.kde.org/
 %if 0%{?git:1}
 Source0:	https://invent.kde.org/utilities/konsole/-/archive/master/konsole-master.tar.bz2#/konsole-%{git}.tar.bz2
 %else
-Source0:	http://download.kde.org/unstable/release-service/%{version}/src/konsole-%{version}.tar.xz
+Source0:	http://download.kde.org/%{stable}/release-service/%{version}/src/konsole-%{version}.tar.xz
 %endif
 BuildRequires:	pkgconfig(icu-uc)
 BuildRequires:	pkgconfig(zlib)
