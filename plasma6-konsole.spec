@@ -5,7 +5,7 @@
 
 Summary:	A terminal emulator similar to xterm for KDE
 Name:		plasma6-konsole
-Version:	24.05.2
+Version:	24.08.0
 Release:	%{?git:0.%{git}.}1
 Group:		Graphical desktop/KDE
 License:	GPLv2 LGPLv2 GFDL
@@ -61,7 +61,6 @@ A terminal emulator, similar to xterm, for KDE.
 %{_datadir}/kconf_update/konsole_add_hamburgermenu_to_toolbar.sh
 %{_datadir}/zsh/site-functions/_konsole
 %{_datadir}/qlogging-categories6/konsole.categories
-%{_datadir}/knsrcfiles/konsole.knsrc
 %{_bindir}/*
 # Technically this should be a separate libpackage, but given it is
 # required by konsole and nothing else can use it, splitting it out
@@ -71,7 +70,6 @@ A terminal emulator, similar to xterm, for KDE.
 %{_qtdir}/plugins/kf6/parts/konsolepart.so
 %dir %{_qtdir}/plugins/konsoleplugins
 %{_qtdir}/plugins/konsoleplugins/konsole_sshmanagerplugin.so
-%{_datadir}/konsole
 %{_datadir}/metainfo/org.kde.konsole.appdata.xml
 %{_datadir}/applications/org.kde.konsole.desktop
 %{_datadir}/knotifications6/konsole.notifyrc
@@ -97,6 +95,3 @@ A terminal emulator, similar to xterm, for KDE.
 %install
 %ninja_install -C build
 %find_lang %{name} --all-name --with-html
-
-# We get this from distro-release
-rm %{buildroot}%{_sysconfdir}/xdg/konsolerc
