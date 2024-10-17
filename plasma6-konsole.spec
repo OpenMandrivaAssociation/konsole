@@ -9,7 +9,7 @@ Version:	24.08.2
 Release:	%{?git:0.%{git}.}1
 Group:		Graphical desktop/KDE
 License:	GPLv2 LGPLv2 GFDL
-Url:		http://konsole.kde.org/
+Url:		https://konsole.kde.org/
 %if 0%{?git:1}
 Source0:	https://invent.kde.org/utilities/konsole/-/archive/%{gitbranch}/konsole-%{gitbranchd}.tar.bz2#/konsole-%{git}.tar.bz2
 %else
