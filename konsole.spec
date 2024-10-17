@@ -6,7 +6,7 @@ Release:	3
 Epoch:		1
 Group:		Graphical desktop/KDE
 License:	GPLv2 LGPLv2 GFDL
-Url:		http://konsole.kde.org/
+Url:		https://konsole.kde.org/
 Source0:	http://download.kde.org/%{stable}/release-service/%{version}/src/%{name}-%{version}.tar.xz
 Source1:	%{name}.rpmlintrc
 BuildRequires:	pkgconfig(icu-uc)
