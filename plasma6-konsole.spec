@@ -5,7 +5,7 @@
 
 Summary:	A terminal emulator similar to xterm for KDE
 Name:		plasma6-konsole
-Version:	24.08.2
+Version:	24.08.3
 Release:	%{?git:0.%{git}.}1
 Group:		Graphical desktop/KDE
 License:	GPLv2 LGPLv2 GFDL
