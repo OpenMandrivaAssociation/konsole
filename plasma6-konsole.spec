@@ -6,7 +6,7 @@
 Summary:	A terminal emulator similar to xterm for KDE
 Name:		plasma6-konsole
 Version:	24.12.3
-Release:	%{?git:0.%{git}.}5
+Release:	%{?git:0.%{git}.}6
 Group:		Graphical desktop/KDE
 License:	GPLv2 LGPLv2 GFDL
 Url:		https://konsole.kde.org/
@@ -15,6 +15,9 @@ Source0:	https://invent.kde.org/utilities/konsole/-/archive/%{gitbranch}/konsole
 %else
 Source0:	http://download.kde.org/%{stable}/release-service/%{version}/src/konsole-%{version}.tar.xz
 %endif
+BuildSystem:	cmake
+BuildOption:	-DKDE_INSTALL_USE_QT_SYS_PATHS:BOOL=ON
+BuildOption:	-DBUILD_QCH:BOOL=ON
 BuildRequires:	pkgconfig(icu-uc)
 BuildRequires:	pkgconfig(zlib)
 BuildRequires:	cmake(Qt6)
@@ -77,21 +80,36 @@ A terminal emulator, similar to xterm, for KDE.
 %{_qtdir}/plugins/konsoleplugins/konsole_quickcommandsplugin.so
 %{_datadir}/kio/servicemenus/konsolerun.desktop
 %{_datadir}/kglobalaccel/org.kde.konsole.desktop
+%{_datadir}/polkit-1/actions/org.kde.konsole.policy
 
 #-----------------------------------------------------------------------------
 
-%prep
-%autosetup -p1 -n konsole-%{?git:%{gitbranchd}}%{!?git:%{version}}
-%cmake \
-	-DBUILD_QCH:BOOL=ON \
-	-DBUILD_WITH_QT6:BOOL=ON \
-	-DQT_MAJOR_VERSION=6 \
-	-DKDE_INSTALL_USE_QT_SYS_PATHS:BOOL=ON \
-	-G Ninja
+%install -a
+mkdir -p %{buildroot}%{_datadir}/polkit-1/actions
+cat >%{buildroot}%{_datadir}/polkit-1/actions/org.kde.konsole.policy <<'EOF'
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- SPDX-FileCopyrightText: no
+     SPDX-License-Identifier: CC0-1.0
+-->
+<!DOCTYPE policyconfig PUBLIC
+"-//freedesktop//DTD PolicyKit Policy Configuration 1.0//EN"
+"http://www.freedesktop.org/standards/PolicyKit/1/policyconfig.dtd">
+<policyconfig>
 
-%build
-%ninja_build -C build
+ <vendor>Konsole</vendor>
+ <vendor_url>https://apps.kde.org/konsole</vendor_url>
 
-%install
-%ninja_install -C build
-%find_lang %{name} --all-name --with-html
+ <action id="org.kde.konsole.pkexec.run">
+    <description>Konsole terminal</description>
+    <message>Authentication is required to run the Konsole terminal in admin mode</message>
+    <icon_name>org.kde.konsole</icon_name>
+    <defaults>
+     <allow_any>no</allow_any>
+     <allow_inactive>no</allow_inactive>
+     <allow_active>auth_admin</allow_active>
+    </defaults>
+    <annotate key="org.freedesktop.policykit.exec.path">/usr/bin/konsole</annotate>
+    <annotate key="org.freedesktop.policykit.exec.allow_gui">true</annotate>
+ </action>
+</policyconfig>
+EOF
