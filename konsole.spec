@@ -4,7 +4,7 @@
 %define gitbranchd %(echo %{gitbranch} |sed -e "s,/,-,g")
 
 Summary:	A terminal emulator similar to xterm for KDE
-Name:		plasma6-konsole
+Name:		konsole
 Version:	25.04.0
 Release:	%{?git:0.%{git}.}1
 Group:		Graphical desktop/KDE
