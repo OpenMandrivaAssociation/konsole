@@ -5,7 +5,7 @@
 
 Summary:	A terminal emulator similar to xterm for KDE
 Name:		konsole
-Version:	25.04.0
+Version:	25.04.3
 Release:	%{?git:0.%{git}.}1
 Group:		Graphical desktop/KDE
 License:	GPLv2 LGPLv2 GFDL
@@ -54,6 +54,8 @@ BuildRequires:	cmake(ECM)
 BuildRequires:	%mklibname -d KF6IconWidgets
 # Just to make sure we don't pull in the conflicting Plasma5 package
 BuildRequires:	plasma6-xdg-desktop-portal-kde
+
+%rename plasma6-konsole
 
 %description
 A terminal emulator, similar to xterm, for KDE.
