@@ -5,7 +5,7 @@
 
 Summary:	A terminal emulator similar to xterm for KDE
 Name:		konsole
-Version:	25.04.3
+Version:	25.08.0
 Release:	%{?git:0.%{git}.}1
 Group:		Graphical desktop/KDE
 License:	GPLv2 LGPLv2 GFDL
@@ -61,9 +61,6 @@ BuildRequires:	plasma6-xdg-desktop-portal-kde
 A terminal emulator, similar to xterm, for KDE.
 
 %files -f %{name}.lang
-%{_libdir}/kconf_update_bin/konsole_show_menubar
-%{_datadir}/kconf_update/konsole.upd
-%{_datadir}/kconf_update/konsole_add_hamburgermenu_to_toolbar.sh
 %{_datadir}/zsh/site-functions/_konsole
 %{_datadir}/qlogging-categories6/konsole.categories
 %{_bindir}/*
@@ -78,7 +75,6 @@ A terminal emulator, similar to xterm, for KDE.
 %{_datadir}/metainfo/org.kde.konsole.appdata.xml
 %{_datadir}/applications/org.kde.konsole.desktop
 %{_datadir}/knotifications6/konsole.notifyrc
-%{_libdir}/kconf_update_bin/konsole_globalaccel
 %{_qtdir}/plugins/konsoleplugins/konsole_quickcommandsplugin.so
 %{_datadir}/kio/servicemenus/konsolerun.desktop
 %{_datadir}/kglobalaccel/org.kde.konsole.desktop
