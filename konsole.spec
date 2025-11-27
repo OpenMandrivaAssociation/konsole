@@ -6,7 +6,7 @@
 Summary:	A terminal emulator similar to xterm for KDE
 Name:		konsole
 Version:	25.08.3
-Release:	%{?git:0.%{git}.}1
+Release:	%{?git:0.%{git}.}2
 Group:		Graphical desktop/KDE
 License:	GPLv2 LGPLv2 GFDL
 Url:		https://konsole.kde.org/
