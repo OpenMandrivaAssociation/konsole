@@ -5,7 +5,7 @@
 
 Summary:	A terminal emulator similar to xterm for KDE
 Name:		konsole
-Version:	26.04.3
+Version:	26.08.0
 Release:	%{?git:0.%{git}.}1
 Group:		Graphical desktop/KDE
 License:	GPLv2 LGPLv2 GFDL
@@ -16,6 +16,7 @@ Source0:	https://invent.kde.org/utilities/konsole/-/archive/%{gitbranch}/konsole
 Source0:	http://download.kde.org/%{stable}/release-service/%{version}/src/konsole-%{version}.tar.xz
 %endif
 BuildSystem:	cmake
+BuildOption:	-DBUILD_PYTHON_BINDINGS:BOOL=OFF
 BuildOption:	-DKDE_INSTALL_USE_QT_SYS_PATHS:BOOL=ON
 BuildOption:	-DBUILD_QCH:BOOL=ON
 BuildRequires:	pkgconfig(icu-uc)
