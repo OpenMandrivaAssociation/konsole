@@ -21,6 +21,7 @@ BuildOption:	-DKDE_INSTALL_USE_QT_SYS_PATHS:BOOL=ON
 BuildOption:	-DBUILD_QCH:BOOL=ON
 BuildRequires:	pkgconfig(icu-uc)
 BuildRequires:	pkgconfig(zlib)
+BuildRequires:	cmake(libssh)
 BuildRequires:	cmake(Qt6)
 BuildRequires:	cmake(Qt6Core)
 BuildRequires:	cmake(Qt6DBus)
